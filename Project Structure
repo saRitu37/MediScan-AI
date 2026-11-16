@@ -1,0 +1,39 @@
+MediScan-AI/
+├── README.md
+├── .gitignore
+├── docker-compose.yml
+│
+├── frontend/                 # React / Next.js
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/            # login, dashboard, upload, result, patients
+│   │   └── services/         # API calls
+│   └── package.json
+│
+├── backend/                  # FastAPI
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── api/              # auth, patients, studies, reports routes
+│   │   ├── models/           # database models
+│   │   ├── schemas/          # Pydantic schemas
+│   │   ├── services/         # inference, QC gate, PDF report
+│   │   └── core/             # config, security
+│   ├── tests/
+│   └── requirements.txt
+│
+├── ml/                       # AI / training
+│   ├── data/                 # NOT pushed to GitHub (see .gitignore)
+│   ├── notebooks/            # EDA, experiments
+│   ├── src/
+│   │   ├── dataset.py
+│   │   ├── train.py
+│   │   ├── evaluate.py
+│   │   └── gradcam.py
+│   ├── configs/
+│   └── requirements.txt
+│
+└── docs/
+    ├── proposal/             # Proposal PDF, team info
+    ├── wireframes/
+    └── risk-register.md
